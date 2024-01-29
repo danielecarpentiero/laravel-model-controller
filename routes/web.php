@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('template');
-});
+/* tutti i film */
+
+Route::get('/', [PageController::class, 'index']);
+
+/* singolo film */
+
+Route::get('/movie/{id}', [PageController::class, 'show']);
