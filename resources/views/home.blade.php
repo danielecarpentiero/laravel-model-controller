@@ -9,13 +9,20 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>My favorite movie list</h1>
-        <ul>
+    <h1 class="text-center py-5">My favorite movie list</h1>
+    <div class="container d-flex flex-wrap">
             @foreach ($movies as $movie)
-                <li class="list-unstyled">{{$movie['title']}}</li>
+            <div class="card">
+                <div class="card-body">
+                  <h3>Titolo: {{$movie['title']}}</h3>
+                  <h4>Titolo originale: {{$movie['original_title']}}</h4>
+                  <h5>Nazionalita: {{$movie['nationality']}}</h5>
+                  <h6>Data di uscita: {{$movie['date']}}</h6>
+                  <h6>Voto della critica: {{$movie['vote']}}</h6>
+                  <a href="#" class="btn btn-primary">Info</a>
+                </div>
+              </div>
             @endforeach
-        </ul>
     </div>
 </body>
 

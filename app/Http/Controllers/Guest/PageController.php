@@ -16,7 +16,6 @@ class PageController extends Controller
 
     public function show($id)
     {
-        $movie = Movie::find($id);
-        return "la card del film è {$movie['$id']}";
+        return "sono il film numero {$id}";
     }
 }
